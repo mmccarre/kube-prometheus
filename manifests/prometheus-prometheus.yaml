@@ -29,4 +29,11 @@ spec:
   serviceAccountName: prometheus-k8s
   serviceMonitorNamespaceSelector: {}
   serviceMonitorSelector: {}
+  storage:
+    volumeClaimTemplate:
+      spec:
+        storageClassName: solidfire
+        resources:
+          requests:
+            storage: 200Gi
   version: v2.7.2
